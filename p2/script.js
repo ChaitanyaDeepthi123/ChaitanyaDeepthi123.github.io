@@ -5,7 +5,7 @@ const showLogin = () => {
     <p><input type="text" id="txtEmail"></p>
     <p><input type="password" id="txtPass"></p>
     <p><button>Log In</button></p>
-    <p><button onclick='showRegister()'>Create Account</button></p>
+    <p><button onclick="showRegister()">Create Account</button></p>
     </div>
     `
     root.innerHTML = str
