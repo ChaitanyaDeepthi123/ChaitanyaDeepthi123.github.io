@@ -24,7 +24,7 @@ const showRegister = () => {
     `
     root.innerHTML = str
 }
-const welcome=()=>{
+const welcome = ()=>{
     let str=`
     <h1>welcome!!!!</h1>
     ` 
