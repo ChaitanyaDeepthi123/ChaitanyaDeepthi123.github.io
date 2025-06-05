@@ -24,3 +24,11 @@ const showRegister = () => {
     `
     root.innerHTML = str
 }
+const showHome=()=>{
+    let str=`
+    <h1>welcome!!!!</h1>
+    <p><button onclick='Login()'>WELCOME TO THE PAGE</button></p>"
+    ` 
+  root.innerHTML = str
+    
+}
