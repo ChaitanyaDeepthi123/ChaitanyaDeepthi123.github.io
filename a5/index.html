@@ -4,43 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 </head>
 <body>
- 
-<script>
-    function greet(){
-        alert(textname.value);
-    }
-    function calcadd(){
-        let a=Number(num1.value);
-        let b=Number(num2.value);
-        //alert(a+b)
-        dvResult.innerHTML=a+b;
-    }
-    function calcsub(){
-        let a=Number(num1.value);
-        let b=Number(num2.value);
-        //alert(a+b)
-        dvResult.innerHTML=a-b;
-    }
-    function calcmul(){
-         let a=Number(num1.value);
-        let b=Number(num2.value);
-        //alert(a+b)
-        dvResult.innerHTML=a*b;
-    }
+    <input type="text" id="name" placeholder="Name">
+    <input type = "text" id="username" placeholder="Username" >
+    <input type = "text" id="password" placeholder="password">
+    <button onclick = "submit()" >Submit</button>
+ <div id="dvRes"></div>
 
+    <script>
+        function submit(){
+            let name = document.getElementById("name").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            document.getElementById("dvRes").innerHTML = 
+                "Name: " + name + "<br>" +
+                "Username: " + username + "<br>" +
+                "Password: " + password;
+        }
     </script>
-    <input type="text" id="textname" />
-    <button onclick="greet()" style="background-color: darkorchid;">Click</button>
- <br>
-  <input type="text" id ="num1" />
-  <input type="text" id="num2" />
-  <button onclick="calcadd()" style="background-color: darkorchid;">add</button>
-  <button onclick="calcsub()" style="background-color: darkorchid;">subract</button>
-  <button onclick="calcmul()" style="background-color: darkorchid;">multiply</button>
-<div id="dvResult"></div>
-    
 </body>
 </html>
