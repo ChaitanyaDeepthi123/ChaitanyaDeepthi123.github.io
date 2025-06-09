@@ -36,16 +36,16 @@ const showHome = () => {
       <option value=1>Deposit</option>
       <option value=2>Withdraw</option>
       </select></p>
-      <p>
       <input type='number' id='txtAmount'>
-      <button onclick="updateBalance()">submit</button>
       </p>
+      <p><button>Submit</button>
+
     <button onclick='showLogin()'>Logout</button>
     <hr>
     <p>Current balance:${user.balance}
     `;
   root.innerHTML = str;
-}
+};
 
 const addUser = () => {
   const obj = {
@@ -69,30 +69,5 @@ const validateUser = () => {
   } else {
     dvMsg.innerHTML = "Access Denied";
   }
-};
-const updateBalance = () => {
-  const amount = Number(document.getElementById("txtAmount").value);
-
-  if (isNaN(amount) || amount <= 0) {
-    alert("Please enter a valid amount.");
-    return;
-  }
-
-  if (value === "1") {
-    // Deposit
-    user.balance += amount;
-  } else if (value === "2") {
-    // Withdraw
-    if (amount > user.balance) {
-      alert("Insufficient balance!");
-      return;
-    }
-    user.balance -= amount;
-  } else {
-    alert("Please select a valid action.");
-    return;
-  }
-
-  showHome();
 };
 
